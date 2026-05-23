@@ -39,3 +39,18 @@ def exibir_placar(Monstro_1, Monstro_2, hp_1, hp_2):
   print(f"{Nome_monstro} possui {hp_1} pontos de vida")
   print(f"{Nome_monstro_2} possui {hp_2} pontos de vida restantes")
   return
+
+# Loop de batalha, onde os monstros se atacam a cada turno até que um deles tenha seu hp reduzido a 0
+## A cada ataque o placar é exibido para o usuário, exibindo uma mensagem de vitória assim que o loop se encerrar, ou seja hp = 0 de um dos monstros.
+while HP > 0 and HP_2 > 0:
+  HP_2 = Atacar(Nome_monstro, Nome_monstro_2, Ataque, HP_2)
+  exibir_placar(Nome_monstro, Nome_monstro_2, HP, HP_2)
+  if HP_2 == 0:
+    print(f"\n{Nome_monstro} venceu o épico combate, parabéns!")
+    break
+  
+  HP = Atacar(Nome_monstro_2, Nome_monstro, Ataque_2, HP)
+  exibir_placar(Nome_monstro, Nome_monstro_2, HP, HP_2)
+  if HP == 0:
+    print(f"\n{Nome_monstro_2} derrotou seu forte adversário, parabéns!")
+    break
