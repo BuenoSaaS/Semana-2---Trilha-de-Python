@@ -1,2 +1,15 @@
 # Semana-2---Trilha-de-Python
 Desafio e readme semana 2 
+
+
+
+Semana 2
+O programa recebe os inputs para o usuário referentes ao nome, vida e pontos de ataque da criatura desejada em se usar no combate, de ambas as criaturas, verificando se há números negativos ou erro de colocação (Letras em hp e ataque ou números nos nomes), encerrando o programa e pedindo que o usuário insira os dados novamente. Após isso, foram criadas funções de visualização e transformação, respectivamente exibirplacar que mostrará os resultados dos ataques a cada turno, ou seja, quanta vida cada criatura possui, e a função Atacar que irá realizar o cálculo do hp de quem será atacado ao subtraí-lo dos pontos de ataque do monstro na ofensiva, retornando o valor do hp_restante para armazená-lo e continuar a luta, além de igualar o hp a 0 caso fique negativo durante os combates. Por fim criou-se um loop utilizando while com limitações de enquanto o hp de uma das criaturas for maior que 0, ou seja, assim que o hp de uma delas atingir 0 o loop se encerra e as condicionais if dentro dele emitem a mensagem de qual criatura ganhou a luta para o usuário.
+
+Instruções
+O programa realiza os cálculos de diminuição da vida automaticamente e converte em mensagens de vitória quando necessário, a única ação necessária do usuário é fornecer os inputs que deseja respeitando as restrições estabelecidas, o programa continuará notificando o erro até que seja corrigido, e assim irá gerar as mensagens de ações dos turnos até o encerramento do loop com a parabenização à criatura vitoriosa.
+
+Questões 
+1 - O for é utilizado quando possuímos uma quantidade mais precisa de repetições que queremos/precisamos realizar, enquanto o while funciona com princípios de lógica, podendo estabelecer parâmetros que não saberíamos do limite necessariamente, a exemplo, enquanto determinada variável possuir um valor ou for maior que valor continue o loop, até enquanto uma condição for verdadeira continue. Foi utilizado para esse desafio pois não há garantia de quantos turnos seriam necessários para o encerramento do combate, visto que a vida e o ataque das criaturas são apontadas pelo usuário, não são estabelecidas antes do recebimento dos inputs.
+2 - O return é uma forma de chamar a variável, dizer para o programa compreender ela para fora da função com intuito de ser utilizada novamente ou armazenada, como é o caso para exibir o placar e continuar os cálculos. Sem o return não poderíamos utilizar a variável em outras funções, contas ou prints determinados pois ela estaria armazenada apenas dentro da função construída, limitando drasticamente seu uso.
+3 - É um loop no qual uma condição de parada não foi estipulada/alcançada por determinada razão e portanto seria um erro de programa pois irá continuar rodando o código sem parar, não exibindo resultados desejáveis e podendo causar quebras/erros tanto no código geral quanto no computador. Para evitar que isso aconteça o desejável é estipular uma condição de parada possível de se alcançar dadas informações e ao utilizar variáveis para a condição, garantir que elas estão variando dentro do loop de forma a atingir seu limite.
